@@ -20,5 +20,10 @@ class GamePresenter(private val model: GameModel) {
         Log.d("GamePresenter", "New cell added: $newCell")
         Log.d("GamePresenter", "Cells: $newCellsState")
     }
+
+    fun restoreState(cells: List<CellState>) {
+        _cells.value = cells
+    }
 }
+
 
